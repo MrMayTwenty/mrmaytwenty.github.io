@@ -7,18 +7,18 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./Assets/Trackers/targets.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video>
+        <!-- <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video> -->
         <!-- <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.1/examples/image-tracking/assets/card-example/card.png" /> -->
-        <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item> -->
+        <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item>
         <a-asset-item id="dancerCouple" src="/Assets/Models/wedding_dance/wedding_dance.obj"></a-asset-item>
-        <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item>
+        <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item> -->
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
-        <a-video src="#prototype-video" autoplay width="1" height="1.7778" position="0 0 0"></a-video>
-        <a-plane id="btnMusicPrevious" width="1" height="1" position="30 0 0" ></a-plane>
-        <a-plane id="btnMusicNext" width="1" height="1" position="-30 0 0" ></a-plane>
+        <!-- <a-video src="#prototype-video" autoplay width="1" height="1.7778" position="0 0 0"></a-video> -->
+        <a-plane id="btnMusicPrevious" color="#7BC8A4" width="1" height="1" position="30 0 0" ></a-plane>
+        <a-plane id="btnMusicNext" color="#7BC8A4" width="1" height="1" position="-30 0 0" ></a-plane>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
         <!-- Music box controls-->
