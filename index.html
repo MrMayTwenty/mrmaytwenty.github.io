@@ -8,8 +8,13 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./Assets/Trackers/targets.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
+        <img id="imgPlay" src="./Assets/Images/icons/play.png">
+        <img id="imgStop" src="./Assets/Images/icons/stop.png">
+        <img id="imgMap" src="./Assets/Images/icons/map.png">
+        <img id="imgSponsor" src="./Assets/Images/icons/sponsors.png">
+
         <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video>
-        <!-- <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.1/examples/image-tracking/assets/card-example/card.png" /> -->
+
         <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item>
         <a-asset-item id="dancerCouple" src="/Assets/Models/wedding_dance/wedding_dance.obj"></a-asset-item>
         <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item> -->
@@ -18,20 +23,20 @@
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
         <a-video src="#prototype-video" width="1" height="1.7778" position="0 0 0"></a-video>
         <a-entity group position="0 -1.10 0">
-          <a-plane class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF">
-            <a-text value="PREVIOUS"></a-text>
-          </a-plane>
-          <a-plane class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#F78764">
-            <a-text value="NEXT"></a-text>
-          </a-plane>
-        </a-entity>
-        <a-entity group position="-0.75 0 0">
-          <a-plane class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#634133">
-            <a-text value="MAP"></a-text>
-          </a-plane>
-          <a-plane class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#F78764">
-            <a-text value="SPONSORS"></a-text>
-          </a-plane>
+          <a-image class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgStop">
+
+          </a-image>
+          <a-image class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgPlay">
+
+          </a-image>
+        </a-image>
+        <a-image group position="-0.75 0 0">
+          <a-image class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgMap">
+
+          </a-image>
+          <a-image class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgSponsor">
+ 
+          </a-image>
         </a-entity>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
