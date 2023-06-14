@@ -32,7 +32,7 @@ function addInitialEventHandlers(){
 
         btnPrevious.addEventListener("click", event => {
           document.querySelector('#prototype-video').play();
-        }
+        });
 }
 
 function onTargetFound(){
