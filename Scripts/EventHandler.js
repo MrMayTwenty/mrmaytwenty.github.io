@@ -3,6 +3,8 @@ function addInitialEventHandlers(){
         const sceneEl = document.querySelector('a-scene');
         const imgTarget = document.querySelector('#imgTarget');
         const examplePlane = document.querySelector('#example-plane');
+        const btnPrevious = document.querySelector('#btnPrevious')
+        
         // arReady event triggered when ready
         sceneEl.addEventListener("arReady", (event) => {
           // console.log("MindAR is ready")
@@ -24,6 +26,10 @@ function addInitialEventHandlers(){
         examplePlane.addEventListener("click", event => {
           console.log("plane click");
         });
+
+        btnPrevious.addEventListener("click", event => {
+          document.querySelector('#prototype-video').play();
+        })
     });
 }
 
