@@ -10,7 +10,8 @@
       <a-assets>
         <img id="imgPlay" src="./Assets/Images/icons/play.png">
         <img id="imgStop" src="./Assets/Images/icons/stop.png">
-        <img id="imgMap" src="./Assets/Images/icons/map.png">
+        <img id="imgHomeToChurch" src="./Assets/Images/icons/church.png">
+        <img id="imgChurchToReception" src="./Assets/Images/icons/reception.png">
         <img id="imgSponsor" src="./Assets/Images/icons/sponsors.png">
 
         <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video>
@@ -22,21 +23,16 @@
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="near: 10; far: 10000; objects: .clickable"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
         <a-video src="#prototype-video" width="1" height="1.7778" position="0 0 0"></a-video>
+
         <a-entity group position="0 -1.10 0">
-          <a-image class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgStop">
+          <a-image class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgStop"></a-image>
+          <a-image class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgPlay"></a-image>
+        </a-entity>
 
-          </a-image>
-          <a-image class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgPlay">
-
-          </a-image>
-        </a-image>
-        <a-image group position="-0.75 0 0">
-          <a-image class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgMap">
-
-          </a-image>
-          <a-image class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgSponsor">
- 
-          </a-image>
+        <a-entity group position="-0.75 0 0">
+          <a-image class="clickable" id="btnHomeToChurch" position="0 0.30 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgHomeToChurch"></a-image>
+          <a-image class="clickable" id="btnChurchToReception" position="0 0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgChurchToReception"></a-image>
+          <a-image class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgSponsor"></a-image>
         </a-entity>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
