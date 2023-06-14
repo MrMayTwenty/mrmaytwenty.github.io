@@ -18,12 +18,20 @@
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
         <a-video src="#prototype-video" width="1" height="1.7778" position="0 0 0"></a-video>
         <a-entity group position="0 -1.10 0">
-          <a-plane class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF"></a-plane>
-          <a-plane class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#F78764"></a-plane>
+          <a-plane class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#FFFFFF">
+            <a-text value="PREVIOUS"></a-text>
+          </a-plane>
+          <a-plane class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#F78764">
+            <a-text value="NEXT"></a-text>
+          </a-plane>
         </a-entity>
         <a-entity group position="-0.75 0 0">
-          <a-plane class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#634133"></a-plane>
-          <a-plane class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#F78764"></a-plane>
+          <a-plane class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#634133">
+            <a-text value="MAP"></a-text>
+          </a-plane>
+          <a-plane class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#F78764">
+            <a-text value="SPONSORS"></a-text>
+          </a-plane>
         </a-entity>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
