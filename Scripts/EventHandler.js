@@ -10,7 +10,6 @@ function addInitialEventHandlers() {
   const btnMap = document.querySelector('#btnMap');
   const btnSponsors = document.querySelector('#btnSponsors');
   const video = document.querySelector('#prototype-video');
-  video.play();
 
   // arReady event triggered when ready
   sceneEl.addEventListener("arReady", (event) => {
@@ -34,7 +33,6 @@ function addInitialEventHandlers() {
     console.log("btnPrevious clicked")
     video.pause();
     video.currentTime = 0;
-    video.play();
   });
 
   btnNext.addEventListener("click", event => {
