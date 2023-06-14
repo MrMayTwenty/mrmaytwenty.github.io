@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function addInitialEventHandlers() {
   const sceneEl = document.querySelector('a-scene');
   const imgTarget = document.querySelector('#imgTarget');
-  const examplePlane = document.querySelector('#example-plane');
   const btnPrevious = document.querySelector('#btnPrevious');
 
   // arReady event triggered when ready
@@ -24,10 +23,6 @@ function addInitialEventHandlers() {
   // detect target lost
   imgTarget.addEventListener("targetLost", event => {
     console.log("target lost");
-  });
-  // detect click event
-  examplePlane.addEventListener("click", event => {
-    console.log("plane click");
   });
 
   btnPrevious.addEventListener("click", event => {
