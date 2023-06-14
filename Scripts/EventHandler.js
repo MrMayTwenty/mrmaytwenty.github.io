@@ -1,3 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
+  addInitialEventHandlers();
+}, false);
+
 function addInitialEventHandlers(){
     document.addEventListener("DOMContentLoaded", function() {
         const sceneEl = document.querySelector('a-scene');
