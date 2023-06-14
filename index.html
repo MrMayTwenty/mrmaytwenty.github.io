@@ -7,23 +7,25 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./Assets/Trackers/targets.mind" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <!-- <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video> -->
+        <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video>
         <!-- <img id="card" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.1/examples/image-tracking/assets/card-example/card.png" /> -->
         <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item>
         <a-asset-item id="dancerCouple" src="/Assets/Models/wedding_dance/wedding_dance.obj"></a-asset-item>
         <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item> -->
       </a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-camera position="0 0 0" look-controls="enabled: false">
+        <a-cursor></a-cursor>
+      </a-camera>
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
         <a-video src="#prototype-video" autoplay width="1" height="1.7778" position="0 0 0"></a-video>
         <a-entity group position="0 -1.10 0">
-          <a-plane id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#634133"></a-plane>
-          <a-plane id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#F78764"></a-plane>
+          <a-plane class="clickable" id="btnPrevious" position="0.15 0 0" width="0.25" height="0.25" color="#634133"></a-plane>
+          <a-plane class="clickable" id="btnNext" position="-0.15 0 0" width="0.25" height="0.25" color="#F78764"></a-plane>
         </a-entity>
-        <a-entity group position="-1 0 0">
-          <a-plane id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#634133"></a-plane>
-          <a-plane id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#F78764"></a-plane>
+        <a-entity group position="-0.75 0 0">
+          <a-plane class="clickable" id="btnMap" position="0 0.15 0" width="0.25" height="0.25" color="#634133"></a-plane>
+          <a-plane class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#F78764"></a-plane>
         </a-entity>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
