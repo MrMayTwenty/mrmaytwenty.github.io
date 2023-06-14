@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function addInitialEventHandlers(){
-    document.addEventListener("DOMContentLoaded", function() {
         const sceneEl = document.querySelector('a-scene');
         const imgTarget = document.querySelector('#imgTarget');
         const examplePlane = document.querySelector('#example-plane');
-        const btnPrevious = document.querySelector('#btnPrevious')
+        const btnPrevious = document.querySelector('#btnPrevious');
         
         // arReady event triggered when ready
         sceneEl.addEventListener("arReady", (event) => {
@@ -33,8 +32,7 @@ function addInitialEventHandlers(){
 
         btnPrevious.addEventListener("click", event => {
           document.querySelector('#prototype-video').play();
-        })
-    });
+        }
 }
 
 function onTargetFound(){
