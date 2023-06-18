@@ -16,9 +16,9 @@
 
         <video id="prototype-video" autoplay loop="true" src="./Assets/Videos/MOVIE.mp4"></video>
 
-        <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item>
+        <!-- <a-asset-item id="dancerSingle" src="./Assets/Models/dancer/scene.gltf"></a-asset-item> -->
         <a-asset-item id="dancerCouple" src="/Assets/Models/wedding_dance/wedding_dance.obj"></a-asset-item>
-        <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item> -->
+        <a-asset-item id="dancerCouple-mtl" src="/Assets/Models/wedding_dance/wedding_dance.mtl"></a-asset-item> 
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="near: 10; far: 10000; objects: .clickable"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0" id="imgTarget">
@@ -30,18 +30,14 @@
         </a-entity>
 
         <a-entity group position="-0.75 0 0">
-          <a-image class="clickable" id="btnHomeToChurch" position="0 0.30 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgHomeToChurch"></a-image>
+          <a-image class="clickable" id="btnHomeToChurch" position="0 0.60 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgHomeToChurch"></a-image>
           <a-image class="clickable" id="btnChurchToReception" position="0 0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgChurchToReception"></a-image>
           <a-image class="clickable" id="btnSponsors" position="0 -0.15 0" width="0.25" height="0.25" color="#FFFFFF" src="#imgSponsor"></a-image>
         </a-entity>
         <!-- <a-plane src="#card" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane> -->
 
         <!-- Music box controls-->
-        <!-- <a-obj-model src="#dancerCouple" mtl="#dancerCouple-mtl" rotation="0 0 0 " position="-5 0 0" scale="0.005 0.005 0.005" animation="property: rotation; to: 0 0 0; dur: 15000; easing: easeInOutQuad; loop: true;"></a-obj-model>
-
-
-        <a-plane id="btnMap" color="#7BC8A4" width="1" height="1" position="2 -8 0" ></a-plane>
-        <a-plane id="btnSponsors" color="#7BC8A4" width="1" height="1" position="0 -8 2" ></a-plane> -->
+        <a-obj-model src="#dancerCouple" mtl="#dancerCouple-mtl" rotation="0 0 0 " position="-5 0 0" scale="0.005 0.005 0.005" animation="property: rotation; to: 0 0 0; dur: 15000; easing: easeInOutQuad; loop: true;"></a-obj-model>
         <!-- <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.5 0.5 0.5" src="#dancerSingle" animation="property: rotation; to: 0 360 0; dur: 15000; easing: easeInOutQuad; loop: true;"> -->
       </a-entity>
     </a-scene>

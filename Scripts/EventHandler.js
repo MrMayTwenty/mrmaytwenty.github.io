@@ -43,8 +43,13 @@ function addInitialEventHandlers() {
 
   btnHomeToChurch.addEventListener("click", event => {
     console.log("btnHomeToChurch clicked")
-    const directionLink = "https://www.google.com/maps?saddr=My+Location&daddr=Iglesia%20Ni%20Cristo%20-%20Lokal%20ng%20EVM%20-%20Cavite%20South,%204W5X+XM5,%20Tagaytay,%20Cavite";
-    window.open(directionLink, "_blank");
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+
+    }
+
+   
   });
 
   btnChurchToReception.addEventListener("click", event => {
@@ -60,6 +65,10 @@ function addInitialEventHandlers() {
   });
 }
 
+function showPosition(position) {
+  const directionLink = "https://www.google.com/maps?saddr=My+Location&daddr=Iglesia%20Ni%20Cristo%20-%20Lokal%20ng%20EVM%20-%20Cavite%20South,%204W5X+XM5,%20Tagaytay,%20Cavite";
+  window.open(directionLink, "_blank");
+}
 function onTargetFound() {
 
 }
