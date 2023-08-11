@@ -66,9 +66,14 @@ function addInitialEventHandlers() {
 }
 
 function showPosition(position) {
-  const directionLink = "https://www.google.com/maps?saddr=My+Location&daddr=Iglesia%20Ni%20Cristo%20-%20Lokal%20ng%20EVM%20-%20Cavite%20South,%204W5X+XM5,%20Tagaytay,%20Cavite";
+  //Use the position to load as the starting point for google maps
+  const directionLink = "https://www.google.com/maps?saddr=" + position.coords.latitude + "," + position.coords.longitude + "&daddr=Iglesia%20Ni%20Cristo%20-%20Lokal%20ng%20EVM%20-%20Cavite%20South,%204W5X+XM5,%20Tagaytay,%20Cavite";
   window.open(directionLink, "_blank");
 }
-function onTargetFound() {
 
+function onTargetFound() {
+//Click play button
+  const video = document.querySelector('#prototype-video');
+  video.currentTime = 0;
+  video.play();
 }

@@ -1,0 +1,5 @@
+.backgroundedButton {
+    /* Use a white background and should be a cirle */
+    background-color: white;
+    border-radius: 50%;
+}
